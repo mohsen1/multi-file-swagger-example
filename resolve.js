@@ -2,7 +2,22 @@ var resolve = require('json-refs').resolveRefs;
 var YAML = require('yaml-js');
 var fs = require('fs');
 
-var root = YAML.load(fs.readFileSync('index.yaml').toString());
+var program = require('commander');
+
+program
+  .version('0.0.1')
+  .usage('[options] <yaml file ...>')
+  .parse(process.argv);
+
+var file = program.args[0];
+
+if (!fs.existsSync(program.file)) {
+  console.error('File does not exist. ('+program.file+')');
+  console.log(program);
+  process.exit(1);
+}
+
+var root = YAML.load(fs.readFileSync(program.file).toString());
 var options = {
   filter        : ['relative', 'remote'],
   loaderOptions : {
