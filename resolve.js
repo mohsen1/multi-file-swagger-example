@@ -15,12 +15,12 @@ program
 
 var file = program.args[0];
 
-if (!fs.existsSync(program.file)) {
-  console.error('File does not exist. ('+program.file+')');
+if (!fs.existsSync(file)) {
+  console.error('File does not exist. ('+file+')');
   process.exit(1);
 }
 
-var root = YAML.load(fs.readFileSync(program.file).toString());
+var root = YAML.load(fs.readFileSync(file).toString());
 var options = {
   filter        : ['relative', 'remote'],
   loaderOptions : {
