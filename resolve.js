@@ -1,3 +1,7 @@
+#!/usr/bin/env node
+
+'use strict';
+
 var resolve = require('json-refs').resolveRefs;
 var YAML = require('yaml-js');
 var fs = require('fs');
@@ -13,7 +17,6 @@ var file = program.args[0];
 
 if (!fs.existsSync(program.file)) {
   console.error('File does not exist. ('+program.file+')');
-  console.log(program);
   process.exit(1);
 }
 
