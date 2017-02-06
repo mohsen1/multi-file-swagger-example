@@ -1,6 +1,6 @@
 {
   "name": "multi-file-swagger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Multi-file Swagger example",
   "main": "resolve.js",
   "scripts": {
