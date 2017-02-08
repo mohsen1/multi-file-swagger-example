@@ -15,7 +15,7 @@ Install the node tool:
 Run the command like so:
 
 ```javascript
-  multi-file-swagger index.yaml >> index.json
+  multi-file-swagger index.yaml > index.json
 ```
 
 This will resolve every json pointer ($ref) externally or internally and then save it in a json file. Which can then be used for code generation and so on.
