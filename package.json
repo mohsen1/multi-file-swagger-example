@@ -1,14 +1,18 @@
 {
-  "name": "multi-file-swagger-example",
-  "version": "1.0.0",
+  "name": "multi-file-swagger",
+  "version": "2.0.0",
   "description": "Multi-file Swagger example",
   "main": "resolve.js",
   "scripts": {
     "start": "node resolve.js"
   },
+  "bin": {
+    "multi-file-swagger": "resolve.js"
+  },
   "license": "MIT",
   "dependencies": {
-    "json-refs": "^2.0.3",
-    "yaml-js": "^0.1.3"
+    "commander": "^2.9.0",
+    "json-refs": "^2.1.6",
+    "yaml-js": "^0.1.4"
   }
 }
