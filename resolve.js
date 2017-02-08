@@ -9,7 +9,7 @@ var fs = require('fs');
 var program = require('commander');
 
 program
-  .version('0.0.1')
+  .version('2.0.0')
   .usage('[options] <yaml file ...>')
   .parse(process.argv);
 
