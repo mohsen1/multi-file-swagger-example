@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.19.0",
     "js-yaml": "^3.12.2",
     "json-refs": "^3.0.12"
   },
