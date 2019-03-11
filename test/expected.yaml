@@ -1,0 +1,34 @@
+swagger: '2.0'
+info:
+  version: 0.0.0
+  title: Simple API
+paths:
+  /foo:
+    get:
+      responses:
+        '200':
+          description: OK
+  /bar:
+    get:
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/User'
+  /nested:
+    get:
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+definitions:
+  User:
+    type: object
+    properties:
+      name:
+        type: string
+

@@ -1,18 +1,22 @@
 {
   "name": "multi-file-swagger",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "description": "Multi-file Swagger example",
   "main": "resolve.js",
   "scripts": {
-    "start": "node resolve.js"
+    "start": "node resolve.js",
+    "test": "node resolve.js index.yaml > test/resolved.json && node resolve.js -o yaml index.yaml > test/resolved.yaml && node test/diffCheck.js"
   },
   "bin": {
     "multi-file-swagger": "resolve.js"
   },
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.9.0",
-    "js-yaml": "^3.9.1",
-    "json-refs": "^2.1.6"
+    "commander": "^2.19.0",
+    "js-yaml": "^3.12.2",
+    "json-refs": "^3.0.12"
+  },
+  "devDependencies": {
+    "diff": "^4.0.1"
   }
 }
