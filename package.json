@@ -14,7 +14,7 @@
   "dependencies": {
     "commander": "^2.19.0",
     "js-yaml": "^3.12.2",
-    "json-refs": "^3.0.12"
+    "json-refs": "^3.0.15"
   },
   "devDependencies": {
     "diff": "^4.0.1"
